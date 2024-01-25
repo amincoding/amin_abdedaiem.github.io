@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Amin Abdedaiem - Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Amin Abdedaiem</h1>
+        <p>App and Graphical Designer | Computer Scientist</p>
+    </header>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Phone: +213 672 798 720</p>
+        <p>Email: aminabdedaiem@email.com</p>
+        <p>GitHub: <a href="https://github.com/amincoding" target="_blank">github.com/amincoding</a></p>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>Ahmed Draia University, 2017-2021<br>Academic License in Information Systems</p>
+        <p>Udemy, 2020-2021<br>Certificate Course in Full Stack Development</p>
+        <!-- Add other education details -->
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Languages: Arabic, French, English</p>
+        <p>Programming: Python, Flutter, TypeScript, C</p>
+        <p>Design Tools: Photoshop, Adobe Premiere, Adobe After Effects</p>
+        <!-- Add other skills details -->
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an app and graphical designer and computer scientist with 6 years of experience. I specialize in building cross-platform native apps and designing logos and banners as a freelancer.</p>
+        <!-- Add other about me details -->
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>2022 - Local Sonatrack Petroleum Institution<br>Installed and configured ID card maker with a Canon D60 camera (DS3 Sigma card printer)</p>
+        <!-- Add other experience details -->
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul class="projects-list">
+            <li class="project-item" onclick="showProjectDetails(2019)">
+                <h3>Graphic Designer</h3>
+                <p>Tasked to make graphics for offline and offline layouts. Edited editorial photos for clients and social media posts.</p>
+            </li>
+            <li class="project-item" onclick="showProjectDetails(2020)">
+                <!-- Add other project details -->
+            </li>
+            <li class="project-item" onclick="showProjectDetails(2021)">
+                <!-- Add other project details -->
+            </li>
+        </ul>
+        <div id="project-details" style="display: none;">
+            <!-- Project details will be dynamically inserted here using JavaScript -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amin Abdedaiem</p>
+    </footer>
+
+    <script>
+        function showProjectDetails(year) {
+            const projectDetailsDiv = document.getElementById('project-details');
+            projectDetailsDiv.style.display = 'block';
+
+            // Dynamically insert project details
+            switch (year) {
+                case 2019:
+                    projectDetailsDiv.innerHTML = `
+                        <h3>Graphic Designer</h3>
+                        <p>Tasked to make graphics for offline and offline layouts. Edited editorial photos for clients and social media posts.</p>
+                        <!-- Add more details if needed -->
+                    `;
+                    break;
+                // Add other cases for different projects
+                default:
+                    projectDetailsDiv.innerHTML = '<p>No details available for the selected project.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
+
