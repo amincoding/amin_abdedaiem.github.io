@@ -504,20 +504,31 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
 
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll(".nav-link");
 
     navLinks.forEach(function(navLink) {
       navLink.addEventListener("click", function() {
-        const navbarToggler = document.querySelector(".navbar-toggler");
-        if (navbarToggler.getAttribute("aria-expanded") === "true") {
-          navbarToggler.click();
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+        if (navbarCollapse.classList.contains("show")) {
+          navbarCollapse.classList.remove("show");
         }
       });
     });
+
+    // Close the navbar when clicking outside of it
+    window.addEventListener("click", function(event) {
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      if (navbarToggler.getAttribute("aria-expanded") === "true") {
+        if (!event.target.matches('.navbar-toggler')) {
+          navbarToggler.click();
+        }
+      }
+    });
   });
 </script>
+
 
 
 
