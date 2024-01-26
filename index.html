@@ -503,6 +503,23 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="js/main.js"></script>
-  </body>
+  <script src="js/main.js"></script> </body>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(function(navLink) {
+      navLink.addEventListener("click", function() {
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+        if (navbarCollapse.classList.contains("show")) {
+          navbarCollapse.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
+
+
 </html>
