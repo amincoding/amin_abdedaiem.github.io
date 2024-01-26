@@ -510,14 +510,15 @@
 
     navLinks.forEach(function(navLink) {
       navLink.addEventListener("click", function() {
-        const navbarCollapse = document.querySelector(".navbar-collapse");
-        if (navbarCollapse.classList.contains("show")) {
-          navbarCollapse.classList.remove("show");
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        if (navbarToggler.getAttribute("aria-expanded") === "true") {
+          navbarToggler.click();
         }
       });
     });
   });
 </script>
+
 
 
   </body>
